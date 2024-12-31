@@ -5,12 +5,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --navbar-height: 8rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --navbar-height: 8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --navbar-height: 4rem;
   }
 }
 
@@ -18,4 +26,11 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: var(--navbar-height);
+    scroll-behavior: smooth;
+  }
 }

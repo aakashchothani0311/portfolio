@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -19,10 +20,14 @@ const navLinks = [
 export const NavBar = () => {
     const [navBarOpen, setNavBarOpen] = useState(false);
 
+    const closeNav = () => setNavBarOpen(false);
+
     return (
         <nav className='fixed border border-[#33353F] border-l-0 border-r-0 top-0 left-0 right-0 bg-[#121212] z-10'>
             <div className='mx-auto container flex flex-wrap px-4 py-2 lg:py-4 items-center justify-between'>
-                <Image src='/logo.svg' width={75} height={75} alt='logo' />
+                <Link href={"/#home"}>
+                    <Image src='/images/logo.svg' width={75} height={75} className='w-10 h-10 sm:w-14 sm:h-14' alt='logo' />
+                </Link> 
                 <div className='block md:hidden'>
                     {!navBarOpen ?
                         <button onClick={() => setNavBarOpen(true)} className='border rounded border-slate-200 hover:border-white px-2 py-2 flex items-center text-slate-200 hover:text-white'>
@@ -47,9 +52,7 @@ export const NavBar = () => {
                     </ul>
                 </div>
             </div>
-            {
-                navBarOpen ? <MenuOverlay links={navLinks} /> : ''
-            }
+            { navBarOpen && <MenuOverlay links={navLinks} closeNav={closeNav} /> }
         </nav>
     );
 }
