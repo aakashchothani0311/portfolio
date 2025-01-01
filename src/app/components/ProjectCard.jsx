@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { CodeBracketIcon } from '@heroicons/react/24/outline';
 
-export default function ProjectCard({ imgUrl, title, desc, gitUrl }) {
+export const ProjectCard = ({ imgUrl, title, desc, gitUrl }) => {
     return (
         <div>
             <div className='h-52 md:h-72 rounded-t-xl relative group' style={{ background: `url(${imgUrl})`, backgroundSize: 'cover' }}>
@@ -17,5 +17,5 @@ export default function ProjectCard({ imgUrl, title, desc, gitUrl }) {
                 <p className='text-[#ADB7BE]'>{desc}</p>
             </div>
         </div>
-    )
+    );
 }

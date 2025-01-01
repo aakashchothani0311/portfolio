@@ -11,7 +11,16 @@ const navLinks = [
     {
         title: 'About',
         path: '#about'
-    }, {
+    },
+    {
+        title: 'Skills',
+        path: '#skills'
+    },
+    {
+        title: 'Experience',
+        path: '#experience'
+    },
+    {
         title: 'Projects',
         path: '#projects'
     }
@@ -24,7 +33,7 @@ export const NavBar = () => {
 
     return (
         <nav className='fixed border border-[#33353F] border-l-0 border-r-0 top-0 left-0 right-0 bg-[#121212] z-10'>
-            <div className='mx-auto container flex flex-wrap px-4 py-2 lg:py-4 items-center justify-between'>
+            <div className='mx-auto container flex flex-wrap px-4 sm:px-12 py-2 lg:py-4 items-center justify-between'>
                 <Link href={"/#home"}>
                     <Image src='/images/logo.svg' width={75} height={75} className='w-10 h-10 sm:w-14 sm:h-14' alt='logo' />
                 </Link> 

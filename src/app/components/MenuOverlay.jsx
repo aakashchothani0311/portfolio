@@ -12,5 +12,5 @@ export const MenuOverlay = ({ links, closeNav }) => {
                 ))
             }
         </ul>
-    )
+    );
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function AboutMe() {
+export const AboutMe = () => {
     return (
-        <section id="about">
+        <section id="about" className='lg:py-8'>
             <h2 className='mt-4 mb-8 text-center text-4xl font-bold text-white'>About Me</h2>
             <p className='text-white lg:text-lg'>
                 I am Aakash Chothani. I am currently pursuing my Masters in Software Engineering Systems from Northeastern University - Boston campus.
@@ -11,5 +11,5 @@ export default function AboutMe() {
             </p>
 
         </section>
-    )
+    );
 }

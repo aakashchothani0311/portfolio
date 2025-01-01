@@ -13,10 +13,10 @@ export const HeroSection = () => {
     };
 
     return (
-        <section id='home' className='lg:py-16'>
+        <section id='home' className='lg:pt-16 lg:pb-8'>
             <motion.div className='grid grid-cols-1 lg:grid-cols-12' variants={variants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
-                <div className='col-span-8 text-center sm:text-left'>
-                    <h1 className='mb-4 place-self-center sm:justify-self-start text-white text-2xl sm:text-5xl lg:text-7xl font-extrabold'>
+                <div className='col-span-8 text-center lg:text-left'>
+                    <h1 className='mb-4 place-self-center lg:justify-self-start text-white text-2xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold'>
                         Hey👋🏻, I am <br/>
                         <TypeAnimation className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'
                             sequence={[
@@ -36,7 +36,7 @@ export const HeroSection = () => {
                     <p className='mb-6 text-[#ADB7BE] text-base sm:text-lg lg:text-xl'>
                         Welcome to my portfolio.
                     </p>
-                    <div className='mb-6 flex flex-row place-self-center sm:justify-self-start gap-6'>
+                    <div className='mb-6 flex flex-row place-self-center lg:justify-self-start gap-6'>
                         <Link href='mailto:aakashchothani@gmail.com'>
                             <EnvelopeIcon className='h-8 w-8 sm:h-12 sm:w-12 text-white'/>
                         </Link>
@@ -48,7 +48,7 @@ export const HeroSection = () => {
                         </Link>
                     </div>
                     <div>
-                        <Link href='https://drive.google.com/file/d/1AD9XXO2m9e6XNZhRJtgFrJofK0s__Cor/view?usp=sharing' target='_blank' className='px-6 py-3 w-full inline-block sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-bold'>Resume</Link>
+                        <Link href='https://drive.google.com/file/d/1AD9XXO2m9e6XNZhRJtgFrJofK0s__Cor/view?usp=sharing' target='_blank' className='px-6 py-3 w-full inline-block md:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-bold'>Resume</Link>
                     </div>
                 </div>
                 <div className='col-span-4 place-self-center mt-8 lg:mt-0'>

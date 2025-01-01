@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from 'react';
-import ProjectCard from './ProjectCard';
+import { ProjectCard } from './ProjectCard';
 import { motion, useInView } from 'framer-motion';
 
 const projectsData = [
@@ -22,7 +22,7 @@ const projectsData = [
         id: 3,
         title: "Centralised Job Application Portal",
         desc: "Project 3 desc",
-        imgUrl: "/images/projects/3.png",
+        imgUrl: "/images/projects/cropVista.png",
         gitUrl: "https://github.com/aakashchothani0311/cent_job_app_portal"
     },
     {
@@ -36,7 +36,7 @@ const projectsData = [
         id: 5,
         title: "Hospital Inventory Management",
         desc: "Authentication and CRUD operations",
-        imgUrl: "/images/projects/5.png",
+        imgUrl: "/images/projects/cropVista.png",
         gitUrl: "https://github.com/aakashchothani0311/hospital-inventory-management"
     }
 ];
@@ -51,17 +51,17 @@ export const Projects = () => {
     }
 
     return (
-        <section id="projects">
+        <section id="projects" className='lg:py-8'>
             <h2 className='mt-4 mb-8 md:mb-12 text-center text-4xl font-bold text-white'>My Projects</h2>
             <ul ref={ref} className='grid md:grid-cols-3 gap-8 md:gap-12'>
                 {
                     projectsData.map((project, index) => 
-                        <motion.li key={index} variants={cardVariants} initial='initial' animate={isInView ? 'animate' : 'initial'} transition={{ duration: 0.2, delay: index* 0.2 }}>
+                        <motion.li key={index} variants={cardVariants} initial='initial' animate={isInView ? 'animate' : 'initial'} transition={{ duration: 0.5, delay: index * 0.2 }}>
                             <ProjectCard key={project.id} title={project.title} desc={project.desc} imgUrl={project.imgUrl} gitUrl={project.gitUrl}/>
                         </motion.li>  
                     )
                 }
             </ul>
         </section>
-    )
+    );
 }
