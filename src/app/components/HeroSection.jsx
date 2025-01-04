@@ -6,12 +6,12 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
-export const HeroSection = () => {
-    const variants = {
-        initial: { opacity: 0, scale: 0.5 },
-        animate: { opacity: 1, scale: 1 },
-    };
+const variants = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { opacity: 1, scale: 1 },
+};
 
+export const HeroSection = () => {
     return (
         <section id='home' className='lg:pt-16 lg:pb-8'>
             <motion.div className='grid grid-cols-1 lg:grid-cols-12' variants={variants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>

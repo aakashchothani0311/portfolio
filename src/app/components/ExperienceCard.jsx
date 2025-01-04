@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-export const ExperienceCard = ({ Icon, experience }) => {
+export const ExperienceCard = ({ Icon, experience, idx }) => {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
+    const x = useTransform(scrollYProgress, [0, 0.60], [idx % 2 === 0 ? 100 : -100, 0]);
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+
     return (
-        <div className='grid grid-cols-12 rounded-xl bg-[#181818] pl-4 pr-8 pt-4 pb-8'>
+        <motion.div ref={ref} className='grid grid-cols-12 rounded-xl bg-[#1C1B21] pl-4 pr-8 pt-4 pb-8' style={{ x, opacity }} >
             <div className='col-span-3 flex flex-col justify-center items-center'>
                 <Icon className='text-purple-500 w-16 h-16' />
                 <p className='text-white mt-4'>{experience.start} - {experience.end}</p>
@@ -18,6 +24,6 @@ export const ExperienceCard = ({ Icon, experience }) => {
                     }
                 </ul>
             </div>
-        </div>
+        </motion.div>
     )
 }
