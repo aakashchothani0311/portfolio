@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { animate, motion, useMotionValue, useScroll, useTransform } from 'framer-motion';
 import { DiCss3, DiEclipse, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass } from 'react-icons/di';
 import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoTailwindCss, BiLogoTypescript, BiLogoVisualStudio } from 'react-icons/bi';
-import { SiMui, SiOracle, SiPostman, SiSwagger } from 'react-icons/si';
+import { SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger } from 'react-icons/si';
 
 import { SkillCard } from './SkillCard';
 import useMeasure from 'react-use-measure';
@@ -28,7 +28,7 @@ const skills = [
     {
         skill: BiLogoJavascript,
         title: 'JavaScript',
-        color: '#E4A125'
+        color: '#F7DF1E'
     },
     {
         skill: BiLogoTypescript,
@@ -118,6 +118,12 @@ const skills = [
         skill: SiSwagger,
         title: 'Swagger',
         color: '#85B642',
+        dimension: 14
+    },
+    {
+        skill: SiSalesforce,
+        title: 'Salesforce',
+        color: '#00A1E0',
         dimension: 14
     }
 ];
