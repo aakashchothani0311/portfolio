@@ -8,14 +8,14 @@ const projectsData = [
     {
         id: 1,
         title: "Crop Vista",
-        desc: "Project 1 desc",
+        desc: "A MERN application to bring farmers, FMCGs and distributors on a single platform to simplify the crop purchase process and ensure cost security for all the involved entities",
         imgUrl: "/images/projects/cropVista.png",
         gitUrl: "https://github.com/aakashchothani0311/crop-vista"
     },
     {
         id: 2,
         title: "REACT based Task Tracker",
-        desc: "Project 2 desc",
+        desc: "A MERN stack application to manage tasks with filtering capabilities, with features for marking task completion status and filtering by creation date, title, description and task status using Mongoose to perform CRUD on MongoDB",
         imgUrl: "/images/projects/taskTracker.png",
         gitUrl: "https://github.com/aakashchothani0311/task-tracker"
     },
@@ -23,7 +23,7 @@ const projectsData = [
         id: 3,
         title: "Centralised Job Application Portal",
         desc: "Project 3 desc",
-        imgUrl: "/images/projects/cropVista.png",
+        imgUrl: "/images/projects/jobAppTracker.png",
         gitUrl: "https://github.com/aakashchothani0311/cent_job_app_portal"
     },
     {
@@ -37,7 +37,7 @@ const projectsData = [
         id: 5,
         title: "Hospital Inventory Management",
         desc: "Authentication and CRUD operations",
-        imgUrl: "/images/projects/cropVista.png",
+        imgUrl: "/images/projects/hospInvMgmt.png",
         gitUrl: "https://github.com/aakashchothani0311/hospital-inventory-management"
     }
 ];

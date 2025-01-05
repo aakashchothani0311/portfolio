@@ -1,9 +1,10 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { animate, motion, useMotionValue, useScroll, useTransform } from 'framer-motion';
-import { DiCss3, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass } from 'react-icons/di';
-import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi";
+import { DiCss3, DiEclipse, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass } from 'react-icons/di';
+import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoTailwindCss, BiLogoTypescript, BiLogoVisualStudio } from 'react-icons/bi';
+import { SiMui, SiOracle, SiPostman, SiSwagger } from 'react-icons/si';
 
 import { SkillCard } from './SkillCard';
 import useMeasure from 'react-use-measure';
@@ -12,7 +13,7 @@ const skills = [
     {
         skill: DiJava,
         title: 'Java',
-        color: '#68A063'
+        color: '#007396'
     },
     {
         skill: DiHtml5,
@@ -32,7 +33,7 @@ const skills = [
     {
         skill: BiLogoTypescript,
         title: 'TypeScript',
-        color: '#68A063'
+        color: '#3178C6'
     },
     {
         skill: DiReact,
@@ -42,47 +43,82 @@ const skills = [
     {
         skill: BiLogoRedux,
         title: 'Redux',
-        color: '#FFFFFF'
+        color: '#764ABC'
     },
     {
-        skill: DiMysql,
-        title: 'MySQL',
-        color: '#68A063'
-    },
-    {
-        skill: BiLogoMongodb,
-        title: 'MongoDB',
-        color: '#68A063'
+        skill: SiMui,
+        title: 'MUI',
+        color: '#007FFF',
+        dimension: 14
     },
     {
         skill: DiSass,
         title: 'Sass',
-        color: '#68A063'
+        color: '#C69A8D'
     },
     {
         skill: BiLogoTailwindCss,
         title: 'Tailwind CSS',
-        color: '#68A063'
+        color: '#06B6D4'
     },
     {
         skill: DiNodejs,
         title: 'Node JS',
-        color: '#68A063'
+        color: '#8CC84B'
     },
     {
         skill: DiNpm,
         title: 'NPM',
-        color: '#68A063'
+        color: '#CB3837'
+    },
+    {
+        skill: SiOracle,
+        title: 'Oracle DB',
+        color: '#F80000',
+        dimension: 16
+    },
+    {
+        skill: DiMysql,
+        title: 'MySQL',
+        color: '#00758F'
+    },
+    {
+        skill: BiLogoMongodb,
+        title: 'MongoDB',
+        color: '#47A248'
     },
     {
         skill: DiGit,
         title: 'Git',
-        color: '#68A063'
+        color: '#F1502F'
     },
     {
         skill: DiGithubBadge,
         title: 'GitHub',
         color: '#FFFFFF'
+    },
+    {
+        skill: DiEclipse,
+        title: 'Eclipse',
+        color: '#2C2255'
+    },
+    {
+        skill: BiLogoVisualStudio,
+        title: 'VS Code',
+        color: '#0066F1',
+        dimension: 16
+    },
+    {
+        skill: SiPostman,
+        title: 'Postman',
+        color: '#FF6C37',
+        dimension: 14
+    },
+    {
+        skill: SiSwagger,
+        title: 'Swagger',
+        color: '#85B642',
+        dimension: 14
     }
 ];
 
@@ -101,6 +137,9 @@ const certifications = [
     }
 ];
 
+const FAST_DURATION = 15;
+const SLOW_DURATION = 25;
+
 export const Skills = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
@@ -110,34 +149,53 @@ export const Skills = () => {
     const [skillRef, { width }] = useMeasure();
     const x = useMotionValue(0);
 
-    useEffect(() => {
-        let finalPosition = -width / 2;
-        
-        let controls = animate(x, [0, finalPosition], {
-            ease: 'linear',
-            duration: 10,
-            repeat: Infinity,
-            repeatType: 'loop',
-            repeatDelay: 0
-        });
+    const [finish, setFinish] = useState(false);
+    const [rerender, setRerender] = useState(false);
+    const [duration, setDuration] = useState(FAST_DURATION);
 
+    useEffect(() => {
+        let finalPosition = -width/2;
+        let controls;
+
+        if(finish){
+            controls = animate(x, [x.get(), finalPosition], {
+                ease: 'linear',
+                duration: duration * (1 - x.get() / finalPosition),
+                onComplete: () => {
+                    setFinish(false);
+                    setRerender(!rerender);
+                }
+            });
+        } else
+            controls = animate(x, [0, finalPosition], { ease: 'linear', duration: duration, repeat: Infinity, repeatType: 'loop', repeatDelay: 0 });
+    
         return controls.stop;
-    }, [x, width]);
+    }, [x, width, duration, rerender]);
+
+    const handleHoverStart = () => {
+        setFinish(true);
+        setDuration(SLOW_DURATION);
+    };
+
+    const handleHoverEnd = () => {
+        setFinish(true);
+        setDuration(FAST_DURATION);
+    }
 
     return (
         <motion.section id="skills" ref={ref} className='lg:py-8' style={{ y, opacity }}>
             <h2  className='mt-4 mb-8 md:mb-12 text-center text-4xl font-bold text-white'>Skills & Certifications</h2>
-            <div ref={skillRef} className='overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]'>
-                <motion.div className='flex flex-row gap-6' style={{ x }}>
+            <div className='overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]'>
+                <motion.div ref={skillRef} className='flex flex-row gap-6 w-max' style={{ x }} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
                     {
                         [...skills, ...skills].map((skill, ind) => 
-                            <SkillCard key={ind} Icon={skill.skill} title={skill.title} color={skill.color}/>
+                            <SkillCard key={ind} Icon={skill.skill} title={skill.title} dimension={skill.dimension} color={skill.color}/>
                         )
                     }
                 </motion.div>
             </div>
 
-            <div className='mt-8 flex flex-row justify-center gap-4 sm:gap-10'>
+            <div className='mt-12 flex flex-row justify-center gap-4 sm:gap-10'>
                 {
                     certifications.map((cert, idx) => 
                         <Image key={idx} src={`/images/certifications/${cert.src}`} height={200} width={200} className='w-20 h-20 sm:w-28 sm:h-28' alt={cert.alt} />

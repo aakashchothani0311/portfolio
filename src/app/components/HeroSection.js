@@ -13,7 +13,7 @@ const variants = {
 
 export const HeroSection = () => {
     return (
-        <section id='home' className='lg:pt-16 lg:pb-8'>
+        <section id='home' className='lg:mb-32 lg:pt-40 lg:pb-8'>
             <motion.div className='grid grid-cols-1 lg:grid-cols-12' variants={variants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
                 <div className='col-span-8 text-center lg:text-left'>
                     <h1 className='mb-4 place-self-center lg:justify-self-start text-white text-2xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold'>

@@ -20,7 +20,7 @@ export const ProjectCard = ({ imgUrl, title, desc, gitUrl }) => {
             </div>
             <div className='rounded-b-xl bg-[#1C1B21] text-white py-6 px-4'>
                 <h5 className='mb-2 text-xl font-semibold'>{title}</h5>
-                <p className='text-[#ADB7BE]'>{desc}</p>
+                {/* <p className='text-[#ADB7BE]'>{desc}</p> */}
             </div>
         </motion.div>
     );
