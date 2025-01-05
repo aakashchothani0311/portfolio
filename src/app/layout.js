@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Portfolio",
+  title: "Aakash Chothani",
+  description: "Aakash Chothani's Portfolio Website",
 };
 
 export default function RootLayout({ children }) {
