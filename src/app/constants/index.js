@@ -141,6 +141,141 @@ export const skills = [
     }
 ];
 
+/*export const skills = [
+    {
+        skill: DiJava,
+        title: 'Java',
+        color: '#007396',
+        dimension: 20
+    },
+    {
+        skill: DiHtml5,
+        title: 'HTML5',
+        color: '#E34F26',
+        dimension: 20
+    },
+    {
+        skill: DiCss3,
+        title: 'CSS3',
+        color: '#1572B6',
+        dimension: 20
+    },
+    {
+        skill: BiLogoJavascript,
+        title: 'JavaScript',
+        color: '#F7DF1E',
+        dimension: 20
+    },
+    {
+        skill: BiLogoTypescript,
+        title: 'TypeScript',
+        color: '#3178C6',
+        dimension: 20
+    },
+    {
+        skill: DiReact,
+        title: 'React',
+        color: '#61DAFB',
+        dimension: 20
+    },
+    {
+        skill: BiLogoRedux,
+        title: 'Redux',
+        color: '#764ABC',
+        dimension: 20
+    },
+    {
+        skill: SiMui,
+        title: 'MUI',
+        color: '#007FFF',
+        dimension: 14
+    },
+    {
+        skill: DiSass,
+        title: 'Sass',
+        color: '#C69A8D',
+        dimension: 20
+    },
+    {
+        skill: BiLogoTailwindCss,
+        title: 'Tailwind CSS',
+        color: '#06B6D4',
+        dimension: 20
+    },
+    {
+        skill: DiNodejs,
+        title: 'Node JS',
+        color: '#8CC84B',
+        dimension: 20
+    },
+    {
+        skill: DiNpm,
+        title: 'NPM',
+        color: '#CB3837',
+        dimension: 20
+    },
+    {
+        skill: SiOracle,
+        title: 'Oracle DB',
+        color: '#F80000',
+        dimension: 16
+    },
+    {
+        skill: DiMysql,
+        title: 'MySQL',
+        color: '#00758F',
+        dimension: 20
+    },
+    {
+        skill: BiLogoMongodb,
+        title: 'MongoDB',
+        color: '#47A248',
+        dimension: 20
+    },
+    {
+        skill: DiGit,
+        title: 'Git',
+        color: '#F1502F',
+        dimension: 20
+    },
+    {
+        skill: DiGithubBadge,
+        title: 'GitHub',
+        color: '#FFFFFF',
+        dimension: 20
+    },
+    {
+        skill: DiEclipse,
+        title: 'Eclipse',
+        color: '#2C2255',
+        dimension: 20
+    },
+    {
+        skill: BiLogoVisualStudio,
+        title: 'VS Code',
+        color: '#0066F1',
+        dimension: 16
+    },
+    {
+        skill: SiPostman,
+        title: 'Postman',
+        color: '#FF6C37',
+        dimension: 14
+    },
+    {
+        skill: SiSwagger,
+        title: 'Swagger',
+        color: '#85B642',
+        dimension: 14
+    },
+    {
+        skill: SiSalesforce,
+        title: 'Salesforce',
+        color: '#00A1E0',
+        dimension: 14
+    }
+];*/
+
 export const certifications = [
     {
         src: 'jsDev.png',

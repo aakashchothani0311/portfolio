@@ -58,7 +58,7 @@ export const Skills = () => {
             <div className='overflow-hidden sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]'>
                 <motion.div ref={skillRef} className='flex flex-row gap-6 w-max' style={{ x }} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
                     {
-                        [...skills, ...skills].map((skill, ind) => 
+                        [...skills, ...skills].map((skill, ind) =>
                             <SkillCard key={ind} Icon={skill.skill} title={skill.title} dimension={skill.dimension} color={skill.color}/>
                         )
                     }
