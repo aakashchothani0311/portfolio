@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
+import { SiLinkedin } from 'react-icons/si';
 
 const textVariants = {
     initial: { opacity: 0, x: -100 },
@@ -49,7 +50,8 @@ export const HeroSection = () => {
                             <Image src='/images/githubIcon.svg' height={50} width={50} className='h-8 w-8 sm:h-12 sm:w-12' alt="Github Icon" />
                         </Link>
                         <Link href='https://www.linkedin.com/in/aakash-chothani' target='_blank'>
-                            <Image src='/images/linkedInIcon.svg' height={50} width={50} className='h-8 w-8 sm:h-12 sm:w-12' alt="Linkedin Icon" />
+                            <SiLinkedin height={50} width={50} className='h-8 w-8 sm:h-12 sm:w-12 text-white' />   
+                            {/* <Image src='/images/linkedInIcon.svg' height={50} width={50} className='h-8 w-8 sm:h-12 sm:w-12' alt="Linkedin Icon" /> */}
                         </Link>
                     </div>
                     <div>
