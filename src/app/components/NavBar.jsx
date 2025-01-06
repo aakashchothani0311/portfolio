@@ -1,30 +1,12 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
+import { navLinks } from '../constants';
 import { NavLink } from './NavLink';
 import { MenuOverlay } from './MenuOverlay';
-
-const navLinks = [
-    {
-        title: 'About',
-        path: '#about'
-    },
-    {
-        title: 'Skills',
-        path: '#skills'
-    },
-    {
-        title: 'Experience',
-        path: '#experience'
-    },
-    {
-        title: 'Projects',
-        path: '#projects'
-    }
-];
 
 export const NavBar = () => {
     const [navBarOpen, setNavBarOpen] = useState(false);

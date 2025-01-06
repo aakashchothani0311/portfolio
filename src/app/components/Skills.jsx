@@ -1,147 +1,11 @@
-"use client";
+'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { animate, motion, useMotionValue, useScroll, useTransform } from 'framer-motion';
-import { DiCss3, DiEclipse, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass } from 'react-icons/di';
-import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoTailwindCss, BiLogoTypescript, BiLogoVisualStudio } from 'react-icons/bi';
-import { SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger } from 'react-icons/si';
-
-import { SkillCard } from './SkillCard';
 import useMeasure from 'react-use-measure';
 
-const skills = [
-    {
-        skill: DiJava,
-        title: 'Java',
-        color: '#007396'
-    },
-    {
-        skill: DiHtml5,
-        title: 'HTML5',
-        color: '#E34F26'
-    },
-    {
-        skill: DiCss3,
-        title: 'CSS3',
-        color: '#1572B6'
-    },
-    {
-        skill: BiLogoJavascript,
-        title: 'JavaScript',
-        color: '#F7DF1E'
-    },
-    {
-        skill: BiLogoTypescript,
-        title: 'TypeScript',
-        color: '#3178C6'
-    },
-    {
-        skill: DiReact,
-        title: 'React',
-        color: '#61DAFB'
-    },
-    {
-        skill: BiLogoRedux,
-        title: 'Redux',
-        color: '#764ABC'
-    },
-    {
-        skill: SiMui,
-        title: 'MUI',
-        color: '#007FFF',
-        dimension: 14
-    },
-    {
-        skill: DiSass,
-        title: 'Sass',
-        color: '#C69A8D'
-    },
-    {
-        skill: BiLogoTailwindCss,
-        title: 'Tailwind CSS',
-        color: '#06B6D4'
-    },
-    {
-        skill: DiNodejs,
-        title: 'Node JS',
-        color: '#8CC84B'
-    },
-    {
-        skill: DiNpm,
-        title: 'NPM',
-        color: '#CB3837'
-    },
-    {
-        skill: SiOracle,
-        title: 'Oracle DB',
-        color: '#F80000',
-        dimension: 16
-    },
-    {
-        skill: DiMysql,
-        title: 'MySQL',
-        color: '#00758F'
-    },
-    {
-        skill: BiLogoMongodb,
-        title: 'MongoDB',
-        color: '#47A248'
-    },
-    {
-        skill: DiGit,
-        title: 'Git',
-        color: '#F1502F'
-    },
-    {
-        skill: DiGithubBadge,
-        title: 'GitHub',
-        color: '#FFFFFF'
-    },
-    {
-        skill: DiEclipse,
-        title: 'Eclipse',
-        color: '#2C2255'
-    },
-    {
-        skill: BiLogoVisualStudio,
-        title: 'VS Code',
-        color: '#0066F1',
-        dimension: 16
-    },
-    {
-        skill: SiPostman,
-        title: 'Postman',
-        color: '#FF6C37',
-        dimension: 14
-    },
-    {
-        skill: SiSwagger,
-        title: 'Swagger',
-        color: '#85B642',
-        dimension: 14
-    },
-    {
-        skill: SiSalesforce,
-        title: 'Salesforce',
-        color: '#00A1E0',
-        dimension: 14
-    }
-];
-
-const certifications = [
-    {
-        src: 'jsDev.png',
-        alt: 'Salesforce Java Script Developer Certification Badge'
-    },
-    {
-        src: 'appBuilder.png',
-        alt: 'Salesforce App Builder Certification Badge'
-    },
-    {
-        src: 'associate.png',
-        alt: 'Salesforce Associate Certification Badge'
-    }
-];
+import { certifications, skills } from '../constants';
+import { SkillCard } from './SkillCard';
 
 const FAST_DURATION = 15;
 const SLOW_DURATION = 25;
@@ -149,8 +13,8 @@ const SLOW_DURATION = 25;
 export const Skills = () => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
-    const y = useTransform(scrollYProgress, [0, 0.5], [-150, 0]);
-    const opacity = useTransform(scrollYProgress, [0.25, 0.5], [0, 1]);
+    const y = useTransform(scrollYProgress, [0, 0.5], [-100, 0]);
+    const opacity = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
 
     const [skillRef, { width }] = useMeasure();
     const x = useMotionValue(0);

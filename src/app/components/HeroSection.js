@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,16 +6,21 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
-const variants = {
-    initial: { opacity: 0, scale: 0.5 },
-    animate: { opacity: 1, scale: 1 },
+const textVariants = {
+    initial: { opacity: 0, x: -100 },
+    animate: { opacity: 1, x: 0 }
+};
+
+const memojiVariants = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 0 }
 };
 
 export const HeroSection = () => {
     return (
         <section id='home' className='lg:mb-32 lg:pt-40 lg:pb-8'>
-            <motion.div className='grid grid-cols-1 lg:grid-cols-12' variants={variants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
-                <div className='col-span-8 text-center lg:text-left'>
+            <div className='grid grid-cols-1 lg:grid-cols-12'>
+                <motion.div className='col-span-8 text-center lg:text-left' variants={textVariants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
                     <h1 className='mb-4 place-self-center lg:justify-self-start text-white text-2xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold'>
                         Hey👋🏻, I am <br/>
                         <TypeAnimation className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'
@@ -50,11 +55,11 @@ export const HeroSection = () => {
                     <div>
                         <Link href='https://drive.google.com/file/d/1AD9XXO2m9e6XNZhRJtgFrJofK0s__Cor/view?usp=sharing' target='_blank' className='px-6 py-3 w-full inline-block md:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-bold'>Resume</Link>
                     </div>
-                </div>
-                <div className='col-span-4 place-self-center mt-8 lg:mt-0'>
+                </motion.div>
+                <motion.div className='col-span-4 place-self-center mt-8 lg:mt-0' variants={memojiVariants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
                     <Image src='/images/heroImg.png' width={350} height={350} alt='hero image'/>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
         </section>
     );
 }
