@@ -12,12 +12,11 @@ export const Projects = () => {
     const opacity = useTransform(scrollYProgress, [0.1, 0.4], [0, 1]);
 
     return (
-        <motion.section ref={ref} id="projects" className='lg:py-8' style={{ y, opacity }}>
-            <h2 className='mt-4 mb-8 md:mb-12 text-center text-4xl font-bold text-white'>My Projects</h2>
+        <motion.section ref={ref} id="projects" className='mt-12 sm:mt-0 lg:py-8' style={{ y, opacity }}>
+            <h2 className='mt-4 mb-8 md:mb-12 text-center text-3xl sm:text-4xl font-bold text-white'>My Projects</h2>
             <ul className='grid md:grid-cols-3 gap-8 md:gap-12'>
                 {
                     projectsData.map((project, index) => 
-                        // <li key={index} variants={cardVariants} initial='initial' transition={{ duration: 0.5, delay: index * 0.2 }}>
                         <li key={index}>
                             <ProjectCard key={project.id} title={project.title} desc={project.desc} imgUrl={project.imgUrl} gitUrl={project.gitUrl}/>
                         </li>  

@@ -53,8 +53,8 @@ export const Skills = () => {
     }
 
     return (
-        <motion.section id="skills" ref={ref} className='lg:py-8' style={{ y, opacity }}>
-            <h2  className='mt-4 mb-8 md:mb-12 text-center text-4xl font-bold text-white'>Skills & Certifications</h2>
+        <motion.section id="skills" ref={ref} className='mt-12 sm:mt-0 lg:py-8' style={{ y, opacity }}>
+            <h2  className='mt-4 mb-8 md:mb-12 text-center text-2xl sm:text-4xl font-bold text-white'>Skills & Certifications</h2>
             <div className='overflow-hidden sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]'>
                 <motion.div ref={skillRef} className='flex flex-row gap-6 w-max' style={{ x }} onHoverStart={handleHoverStart} onHoverEnd={handleHoverEnd}>
                     {

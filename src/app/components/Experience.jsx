@@ -12,8 +12,8 @@ export const Experience = () => {
     const opacity = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
 
 	return (
-		<motion.section id="experience" ref={ref} className='lg:py-8' style={{ y, opacity }}>
-            <h2 className='mt-4 mb-8 md:mb-12 text-center text-4xl font-bold text-white'>Professional Experience</h2>
+		<motion.section id="experience" ref={ref} className='mt-12 sm:mt-0 lg:py-8' style={{ y, opacity }}>
+            <h2 className='mt-4 mb-8 md:mb-12 text-center text-2xl sm:text-4xl font-bold text-white'>Professional Experience</h2>
 			<div className='flex flex-col gap-4 overflow-hidden'>
 				{
 					experiences.map((experience, idx) =>

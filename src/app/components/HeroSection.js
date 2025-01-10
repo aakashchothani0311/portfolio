@@ -1,11 +1,17 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
-import { SiLinkedin } from 'react-icons/si';
+import { SiLinkedin, SiSalesforce } from 'react-icons/si';
+
+const mailTo = 'mailto:aakashchothani@gmail.com';
+const gitHubLink = 'https://github.com/aakashchothani0311';
+const linkedInLink = 'https://www.linkedin.com/in/aakash-chothani';
+const salesForceLink = 'https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=n9dbuThwUEzr2tBDuw4KYOe4SRuKwcQW8UvRnrUxdeL5gRganSM8n6ONvYesGKIq';
+const resumeLink = process.env.NEXT_PUBLIC_RESUME_LINK;
 
 const textVariants = {
     initial: { opacity: 0, x: -100 },
@@ -24,7 +30,7 @@ export const HeroSection = () => {
                 <motion.div className='col-span-8 text-center lg:text-left' variants={textVariants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
                     <h1 className='mb-4 place-self-center lg:justify-self-start text-white text-2xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold'>
                         Hey👋🏻, I am <br/>
-                        <TypeAnimation className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500'
+                        <TypeAnimation className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500'
                             sequence={[
                                 'Aakash Chothani',
                                 1000,
@@ -43,19 +49,21 @@ export const HeroSection = () => {
                         Welcome to my portfolio.
                     </p>
                     <div className='mb-6 flex flex-row justify-self-center lg:justify-self-start gap-6'>
-                        <Link href='mailto:aakashchothani@gmail.com'>
+                        <Link href={mailTo}>
                             <EnvelopeIcon className='h-8 w-8 sm:h-12 sm:w-12 text-white'/>
                         </Link>
-                        <Link href='https://github.com/aakashchothani0311' target='_blank'>
+                        <Link href={gitHubLink} target='_blank'>
                             <Image src='/images/githubIcon.svg' height={50} width={50} className='h-8 w-8 sm:h-12 sm:w-12' alt="Github Icon" />
                         </Link>
-                        <Link href='https://www.linkedin.com/in/aakash-chothani' target='_blank'>
+                        <Link href={linkedInLink} target='_blank'>
                             <SiLinkedin height={50} width={50} className='h-8 w-8 sm:h-10 sm:w-10 text-white' />   
-                            {/* <Image src='/images/linkedInIcon.svg' height={50} width={50} className='h-8 w-8 sm:h-12 sm:w-12' alt="Linkedin Icon" /> */}
+                        </Link>
+                        <Link href={salesForceLink} target='_blank'>
+                            <SiSalesforce height={50} width={50} className='h-8 w-8 sm:h-10 sm:w-10 text-white' />   
                         </Link>
                     </div>
                     <div>
-                        <Link href='https://drive.google.com/file/d/1AD9XXO2m9e6XNZhRJtgFrJofK0s__Cor/view?usp=sharing' target='_blank' className='px-6 py-3 w-full inline-block md:w-fit rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white font-bold'>Resume</Link>
+                        <Link href={resumeLink} target='_blank' className='px-6 py-3 w-full inline-block md:w-fit rounded-full bg-gradient-to-r from-blue-500 to-pink-500 text-white font-bold'>Resume</Link>
                     </div>
                 </motion.div>
                 <motion.div className='col-span-4 place-self-center mt-8 lg:mt-0' variants={memojiVariants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
