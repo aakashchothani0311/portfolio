@@ -1,5 +1,7 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 import * as THREE from 'three';
 import NET from 'vanta/dist/vanta.net.min';
 
@@ -39,20 +41,22 @@ export default function Home() {
     }, []);
 
   	return (
-		<main className='flex min-h-screen flex-col bg-[#121212]'>
-			<NavBar />
-			<div ref={vantaRef}>
-				<div className='container mt-24 mx-auto px-12 pt-4'>
-					<HeroSection />
+		<Provider store={store}>
+			<main className='flex min-h-screen flex-col bg-[#121212]'>
+				<NavBar />
+				<div ref={vantaRef}>
+					<div className='container mt-24 mx-auto px-12 pt-4'>
+						<HeroSection />
+					</div>
 				</div>
-			</div>
-			<div className='container mx-auto px-12 pb-4'>
-				<AboutMe />
-				<Skills />
-				<Experience />
-				<Projects />
-			</div>
-			<Footer />
-		</main>
+				<div className='container mx-auto px-12 pb-4'>
+					<AboutMe />
+					<Skills />
+					<Experience />
+					<Projects />
+				</div>
+				<Footer />
+			</main>
+		</Provider>
   	);
 }

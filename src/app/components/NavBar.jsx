@@ -1,9 +1,11 @@
 'use client';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
+import { setActiveSection } from '../redux/activeSection-slice';
 import { navLinks } from '../constants';
 import { NavLink } from './NavLink';
 import { MenuOverlay } from './MenuOverlay';
@@ -11,12 +13,14 @@ import { MenuOverlay } from './MenuOverlay';
 export const NavBar = () => {
     const [navBarOpen, setNavBarOpen] = useState(false);
     const closeNav = () => setNavBarOpen(false);
+    
+    const dispatch = useDispatch();
 
     return (
         <nav className='fixed border border-[#33353F] border-l-0 border-r-0 top-0 left-0 right-0 bg-[#121212] z-10'>
             <div className='mx-auto container flex flex-wrap px-4 sm:px-12 py-2 lg:py-4 items-center justify-between'>
                 <Link href={"/#home"}>
-                    <Image src='/images/logo.svg' width={75} height={75} className='w-10 h-10 sm:w-14 sm:h-14' alt='logo' />
+                    <Image src='/images/logo.svg' width={75} height={75} className='w-10 h-10 sm:w-14 sm:h-14' alt='logo' onClick={() => dispatch(setActiveSection('Home'))} />
                 </Link> 
                 <div className='block md:hidden'>
                     {!navBarOpen ?

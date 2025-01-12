@@ -1,9 +1,11 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Image from 'next/image';
 import { animate, motion, useMotionValue, useScroll, useTransform } from 'framer-motion';
 import useMeasure from 'react-use-measure';
 
+import { setActiveSection } from '../redux/activeSection-slice';
 import { certifications, skills } from '../constants';
 import { SkillCard } from './SkillCard';
 
@@ -51,6 +53,16 @@ export const Skills = () => {
         setFinish(true);
         setDuration(FAST_DURATION);
     }
+
+    const dispatch = useDispatch();
+
+	useEffect(() => {
+        return scrollYProgress.onChange(latest => {
+            if (latest > 0.3) {
+				dispatch(setActiveSection('Skills'));
+            }
+        });
+    }, [scrollYProgress]);
 
     return (
         <motion.section id="skills" ref={ref} className='mt-12 sm:mt-0 lg:py-8' style={{ y, opacity }}>

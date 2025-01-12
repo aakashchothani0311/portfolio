@@ -17,10 +17,12 @@ export const ExperienceCard = ({ Icon, experience, idx }) => {
                 <h5 className='mb-2 text-xl font-semibold text-white'>{experience.company}</h5>
                 <p className='sm:mb-2 text-white'>{experience.role}</p>
                 <p className='sm:hidden mb-2 sm:mb-0 text-white'>{experience.start} - {experience.end}</p>
-                <ul className='list-disc text-base text-justify text-[#ADB7BE] pl-4 sm:pl-8'>
+                <ul className='list-disc text-base text-justify text-pink-500 pl-4 sm:pl-8'>
                     {
                         experience.tasks.map((task, idx) => 
-                            <li key={idx}>{task}</li>
+                            <li key={idx}>
+                                <span className='text-[#ADB7BE]'>{task}</span>
+                            </li>
                         )
                     }
                 </ul>

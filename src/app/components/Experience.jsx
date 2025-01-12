@@ -1,7 +1,9 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+import { setActiveSection } from '../redux/activeSection-slice';
 import { experiences } from '../constants';
 import { ExperienceCard } from './ExperienceCard';
 
@@ -10,6 +12,15 @@ export const Experience = () => {
     const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
     const y = useTransform(scrollYProgress, [0, 0.5], [-100, 0]);
     const opacity = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
+
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+        return scrollYProgress.onChange(latest => {
+            if (latest > 0.4)
+				dispatch(setActiveSection('Experience'));
+        });
+    }, [scrollYProgress]);
 
 	return (
 		<motion.section id="experience" ref={ref} className='mt-12 sm:mt-0 lg:py-8' style={{ y, opacity }}>
