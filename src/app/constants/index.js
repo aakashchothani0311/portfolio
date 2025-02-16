@@ -157,6 +157,18 @@ export const certifications = [
 ];
 
 export const experiences = [
+    {
+		role: 'Graduate Teaching Assistant',
+		company: 'Northeastern University',
+		start: 'Jan 2025',
+		end: 'Present',
+		compIcon: SiAccenture,
+		compIconColor: 'text-purple-500',
+		tasks: [
+			'Assisting Prof. Dr. Chen Hsiang “Jones” Yu for the course INFO 6205: Program Structures and Algorithms, focusing on core data structures like set, queue, linked list, etc and algorithm techniques such as sorting and searching',
+			'Grading assignments and quizzes, conducting office hours and code review sessions for 100 students providing support on topics like efficient data structures, time and space complexity analysis using Big O notation and algorithm optimization'
+		]
+	},
 	{
 		role: 'Full Stack Engineering Senior Analyst',
 		company: 'Accenture',
