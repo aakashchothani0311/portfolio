@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-export const ExperienceCard = ({ Icon, experience, idx }) => {
+export const ExperienceCard = ({ experience, idx }) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
     const x = useTransform(scrollYProgress, [0, 0.50], [idx % 2 === 0 ? 100 : -100, 0]);
@@ -10,7 +11,8 @@ export const ExperienceCard = ({ Icon, experience, idx }) => {
     return (
         <motion.div ref={ref} className='grid grid-cols-12 rounded-xl bg-[#1C1B21] pl-4 pr-8 pt-4 pb-8' style={{ x, opacity }} >
             <div className='hidden sm:col-span-3 sm:flex flex-col justify-center items-center'>
-                <Icon className='text-purple-500 w-16 h-16' />
+                <Image src={experience.imgSrc} width={experience.dimension} height={experience.dimension} alt={experience.company} />
+                {/* <Icon className='text-purple-500 w-16 h-16' /> */}
                 <p className='text-white mt-4'>{experience.start} - {experience.end}</p>
             </div>
             <div className='col-span-12 sm:col-span-9'>

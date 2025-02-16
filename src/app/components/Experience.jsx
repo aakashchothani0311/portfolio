@@ -29,7 +29,7 @@ export const Experience = () => {
 				{
 					experiences.map((experience, idx) =>
 						<div key={idx} >
-							<ExperienceCard key={idx} Icon={experience.compIcon} experience={experience} idx={idx} />
+							<ExperienceCard key={idx} experience={experience} idx={idx} />
 						</div>
 					)
 				}

@@ -1,6 +1,6 @@
 import { DiCss3, DiEclipse, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass } from 'react-icons/di';
 import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoSpringBoot, BiLogoTailwindCss, BiLogoTypescript, BiLogoVisualStudio } from 'react-icons/bi';
-import { SiAccenture, SiApachetomcat, SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger } from 'react-icons/si';
+import { SiApachetomcat, SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger } from 'react-icons/si';
 
 export const navLinks = [
     {
@@ -173,8 +173,8 @@ export const experiences = [
 		company: 'Northeastern University',
 		start: 'Jan 2025',
 		end: 'Present',
-		compIcon: SiAccenture,
-		compIconColor: 'text-purple-500',
+        imgSrc: '/images/profExp/northeasternLogo.png',
+        dimension: 180,
 		tasks: [
 			'Assisting Prof. Dr. Chen Hsiang “Jones” Yu for the course INFO 6205: Program Structures and Algorithms, focusing on core data structures like set, queue, linked list, etc and algorithm techniques such as sorting and searching',
 			'Grading assignments and quizzes, conducting office hours and code review sessions for 100 students providing support on topics like efficient data structures, time and space complexity analysis using Big O notation and algorithm optimization'
@@ -185,8 +185,8 @@ export const experiences = [
 		company: 'Accenture',
 		start: 'Dec 2021',
 		end: 'Dec 2023',
-		compIcon: SiAccenture,
-		compIconColor: 'text-purple-500',
+        imgSrc: '/images/profExp/accentureLogo.png',
+        dimension: 120,
 		tasks: [
 			'Engineered REST API-based Salesforce integration with Slack and MS Teams, to reduce internal sales approval time by 25%',
 			'Architected reusable and configurable web components like custom drop-down, search box, reusable grid with update, sort, filter capabilities, etc. that reduced development times for new user stories',
@@ -199,8 +199,8 @@ export const experiences = [
 		company: 'Accenture',
 		start: 'Dec 2020',
 		end: 'Dec 2021',
-		compIcon: SiAccenture,
-		compIconColor: 'text-purple-500',
+		imgSrc: '/images/profExp/accentureLogo.png',
+        dimension: 120,
 		tasks: [
 			'Served as a Salesforce Developer for a US based healthcare client, implementing LWC, Apex Classes, Triggers, complex SOQL queries and implementing data loads',
 			'Architected reusable and configurable web components like custom drop-down, search box, reusable grid with update, sort, filter capabilities, etc. that reduced development times for new user stories',
@@ -212,44 +212,44 @@ export const experiences = [
 export const projectsData = [
     {
         id: 1,
-        title: "Crop Vista",
-        desc: "A MERN application to bring farmers, FMCGs and distributors on a single platform to simplify the crop purchase process and ensure cost security for all the involved entities",
-        imgUrl: "/images/projects/cropVista.png",
-        gitUrl: "https://github.com/aakashchothani0311/crop-vista"
+        title: 'Crop Vista',
+        desc: 'A MERN application to bring farmers, FMCGs and distributors on a single platform to simplify the crop purchase process and ensure cost security for all the involved entities',
+        imgUrl: '/images/projects/cropVista.png',
+        gitUrl: 'https://github.com/aakashchothani0311/crop-vista'
     },
     {
         id: 2,
-        title: "Portfolio Website",
-        desc: "My Portfolio Website",
-        imgUrl: "/images/projects/portfolio.png",
-        gitUrl: "https://github.com/aakashchothani0311/portfolio"
+        title: 'Portfolio Website',
+        desc: 'My Portfolio Website',
+        imgUrl: '/images/projects/portfolio.png',
+        gitUrl: 'https://github.com/aakashchothani0311/portfolio'
     },
     {
         id: 3,
-        title: "REACT based Task Tracker",
-        desc: "A MERN stack application to manage tasks with filtering capabilities, with features for marking task completion status and filtering by creation date, title, description and task status using Mongoose to perform CRUD on MongoDB",
-        imgUrl: "/images/projects/taskTracker.png",
-        gitUrl: "https://github.com/aakashchothani0311/task-tracker"
+        title: 'REACT based Task Tracker',
+        desc: 'A MERN stack application to manage tasks with filtering capabilities, with features for marking task completion status and filtering by creation date, title, description and task status using Mongoose to perform CRUD on MongoDB',
+        imgUrl: '/images/projects/taskTracker.png',
+        gitUrl: 'https://github.com/aakashchothani0311/task-tracker'
     },
     {
         id: 4,
-        title: "Centralised Job Application Portal",
-        desc: "Project 3 desc",
-        imgUrl: "/images/projects/jobAppTracker.png",
-        gitUrl: "https://github.com/aakashchothani0311/cent_job_app_portal"
+        title: 'Centralised Job Application Portal',
+        desc: 'Project 3 desc',
+        imgUrl: '/images/projects/jobAppTracker.png',
+        gitUrl: 'https://github.com/aakashchothani0311/cent_job_app_portal'
     },
     {
         id: 5,
-        title: "JavaFX based Task Tracker",
-        desc: "Project 4 desc",
-        imgUrl: "/images/projects/smartTaskTracker.png",
-        gitUrl: "https://github.com/aakashchothani0311/smart_task_tracker"
+        title: 'JavaFX based Task Tracker',
+        desc: 'Project 4 desc',
+        imgUrl: '/images/projects/smartTaskTracker.png',
+        gitUrl: 'https://github.com/aakashchothani0311/smart_task_tracker'
     },
     {
         id: 6,
-        title: "Hospital Inventory Management",
-        desc: "Authentication and CRUD operations",
-        imgUrl: "/images/projects/hospInvMgmt.png",
-        gitUrl: "https://github.com/aakashchothani0311/hospital-inventory-management"
+        title: 'Hospital Inventory Management',
+        desc: 'Authentication and CRUD operations',
+        imgUrl: '/images/projects/hospInvMgmt.png',
+        gitUrl: 'https://github.com/aakashchothani0311/hospital-inventory-management'
     }
 ];

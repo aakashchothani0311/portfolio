@@ -67,7 +67,7 @@ export const HeroSection = () => {
                     </div>
                 </motion.div>
                 <motion.div className='col-span-4 place-self-center mt-8 lg:mt-0' variants={memojiVariants} initial='initial' animate='animate' transition={{ duration: 0.5 }}>
-                    <Image src='/images/heroImg.png' width={350} height={350} alt='hero image'/>
+                    <Image src='/images/heroImg.png' width={350} height={350} alt='hero image' />
                 </motion.div>
             </div>
         </section>
