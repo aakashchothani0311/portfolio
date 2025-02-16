@@ -1,6 +1,6 @@
 import { DiCss3, DiEclipse, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass } from 'react-icons/di';
-import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoTailwindCss, BiLogoTypescript, BiLogoVisualStudio } from 'react-icons/bi';
-import { SiAccenture, SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger } from 'react-icons/si';
+import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoSpringBoot, BiLogoTailwindCss, BiLogoTypescript, BiLogoVisualStudio } from 'react-icons/bi';
+import { SiAccenture, SiApachetomcat, SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger } from 'react-icons/si';
 
 export const navLinks = [
     {
@@ -138,6 +138,17 @@ export const skills = [
         title: 'Salesforce',
         color: '#00A1E0',
         dimension: 14
+    },
+    {
+        skill: SiApachetomcat,
+        title: 'Tomcat',
+        color: '#FFCA28',
+        dimension: 14
+    },
+    {
+        skill: BiLogoSpringBoot,
+        title: 'Spring',
+        color: '#8BC34A'
     }
 ];
 
