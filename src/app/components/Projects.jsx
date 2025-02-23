@@ -30,7 +30,7 @@ export const Projects = () => {
                 {
                     projectsData.map((project, index) => 
                         <li key={index}>
-                            <ProjectCard key={project.id} title={project.title} desc={project.desc} imgUrl={project.imgUrl} gitUrl={project.gitUrl}/>
+                            <ProjectCard project={project} />
                         </li>  
                     )
                 }

@@ -48,7 +48,7 @@ export const HeroSection = () => {
                     <p className='mb-6 text-[#ADB7BE] text-base sm:text-lg lg:text-xl'>
                         Welcome to my portfolio.
                     </p>
-                    <div className='mb-6 flex flex-row justify-self-center lg:justify-self-start gap-6'>
+                    <div className='mb-6 flex flex-row justify-center lg:justify-start gap-6'>
                         <Link href={mailTo}>
                             <EnvelopeIcon className='h-8 w-8 sm:h-12 sm:w-12 text-white'/>
                         </Link>

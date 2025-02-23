@@ -203,7 +203,7 @@ export const experiences = [
         dimension: 120,
 		tasks: [
 			'Served as a Salesforce Developer for a US based healthcare client, implementing LWC, Apex Classes, Triggers, complex SOQL queries and implementing data loads',
-			'Architected reusable and configurable web components like custom drop-down, search box, reusable grid with update, sort, filter capabilities, etc. that reduced development times for new user stories',
+			'Developed and deployed Einstein chatbot that resolved customer queries and generated 250+ leads, resulang in $340K worth of won opportuniaes over 2.5 years',
 			'Spear-headed the development team to design a cookie-less e-commerce platform, leveraging user interactions and promotions for user-tracking and personalized experiences'
 		]
 	}
@@ -211,42 +211,36 @@ export const experiences = [
 
 export const projectsData = [
     {
-        id: 1,
         title: 'Crop Vista',
         desc: 'A MERN application to bring farmers, FMCGs and distributors on a single platform to simplify the crop purchase process and ensure cost security for all the involved entities',
         imgUrl: '/images/projects/cropVista.png',
         gitUrl: 'https://github.com/aakashchothani0311/crop-vista'
     },
+    // {
+    //     title: 'Portfolio Website',
+    //     desc: 'My Portfolio Website',
+    //     imgUrl: '/images/projects/portfolio.png',
+    //     gitUrl: 'https://github.com/aakashchothani0311/portfolio'
+    // },
     {
-        id: 2,
-        title: 'Portfolio Website',
-        desc: 'My Portfolio Website',
-        imgUrl: '/images/projects/portfolio.png',
-        gitUrl: 'https://github.com/aakashchothani0311/portfolio'
-    },
-    {
-        id: 3,
         title: 'REACT based Task Tracker',
         desc: 'A MERN stack application to manage tasks with filtering capabilities, with features for marking task completion status and filtering by creation date, title, description and task status using Mongoose to perform CRUD on MongoDB',
         imgUrl: '/images/projects/taskTracker.png',
         gitUrl: 'https://github.com/aakashchothani0311/task-tracker'
     },
     {
-        id: 4,
         title: 'Centralised Job Application Portal',
         desc: 'Project 3 desc',
         imgUrl: '/images/projects/jobAppTracker.png',
         gitUrl: 'https://github.com/aakashchothani0311/cent_job_app_portal'
     },
     {
-        id: 5,
         title: 'JavaFX based Task Tracker',
         desc: 'Project 4 desc',
         imgUrl: '/images/projects/smartTaskTracker.png',
         gitUrl: 'https://github.com/aakashchothani0311/smart_task_tracker'
     },
     {
-        id: 6,
         title: 'Hospital Inventory Management',
         desc: 'Authentication and CRUD operations',
         imgUrl: '/images/projects/hospInvMgmt.png',
