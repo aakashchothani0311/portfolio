@@ -177,7 +177,7 @@ export const experiences = [
         dimension: 180,
 		tasks: [
 			'Assisting Prof. Dr. Chen Hsiang “Jones” Yu for the course INFO 6205: Program Structures and Algorithms, focusing on core data structures like set, queue, linked list, etc and algorithm techniques such as sorting and searching',
-			'Grading assignments and quizzes, conducting office hours and code review sessions for 100 students providing support on topics like efficient data structures, time and space complexity analysis using Big O notation and algorithm optimization'
+			'Grading assignments and quizzes, conducting office hours and code review sessions for 100 students providing support on topics like efficient data structures, optimal algorithms and time and space complexity analysis using Big O notation'
 		]
 	},
 	{
@@ -188,10 +188,11 @@ export const experiences = [
         imgSrc: '/images/profExp/accentureLogo.png',
         dimension: 120,
 		tasks: [
-			'Engineered REST API-based Salesforce integration with Slack and MS Teams, to reduce internal sales approval time by 25%',
-			'Architected reusable and configurable web components like custom drop-down, search box, reusable grid with update, sort, filter capabilities, etc. that reduced development times for new user stories',
-			'Led a five member team at a client Hackathon to design a dynamic lead scoring model to enhance opportunity conversion',
-			'Performed code review for various teams to improvise code quality and ensure best practices'
+			'Engineered REST API-based Salesforce integration with Slack and MS Teams, reducing internal sales approval time by 25%',
+			'Developed Lightning Web Components (LWC) analysis tool for custom metadata and settings optimization, generating exportable reports and achieving 14% and 7% space savings respectively',
+			'Architected reusable and configurable LWC for common use cases like custom picklists, lookups, reusable grid with update, sort and filter capabilities, etc. which helped reduce development times for new user stories',
+			'Led a five member team in client Hackathon, designing dynamic lead scoring model using Salesforce Analytics to enhance opportunity conversion and sales productivity',
+            'Performed code review for various teams to improvise code quality and ensure best practices'
 		]
 	},
 	{
@@ -202,9 +203,10 @@ export const experiences = [
 		imgSrc: '/images/profExp/accentureLogo.png',
         dimension: 120,
 		tasks: [
-			'Served as a Salesforce Developer for a US based healthcare client, implementing LWC, Apex Classes, Triggers, complex SOQL queries and implementing data loads',
-			'Developed and deployed Einstein chatbot that resolved customer queries and generated 250+ leads, resulang in $340K worth of won opportuniaes over 2.5 years',
-			'Spear-headed the development team to design a cookie-less e-commerce platform, leveraging user interactions and promotions for user-tracking and personalized experiences'
+			'Served as Salesforce Developer for a US based client, implementing LWC, Apex Classes, Triggers, complex SOQL queries and implementing data loads',
+			'Customized and created Lightning flows, aura components, approval processes, page layouts, users, roles and profiles, permissions sets, validation rules, schemas, etc. to accommodate new business requirements efficiently',
+			'Developed and deployed Einstein chatbot that resolved customer queries and generated 250+ leads, resulting in $340K worth of won opportunities over 2.5 years',
+            'Spear-headed the development team to design a cookie-less e-commerce platform using Experience Cloud, leveraging user interactions and promotions for user-tracking and personalized experiences'
 		]
 	}
 ];
