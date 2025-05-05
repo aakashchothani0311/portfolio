@@ -1,11 +1,14 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 import { setActiveSection } from '../redux/activeSection-slice';
 import { projectsData } from '../constants';
 import { ProjectCard } from './ProjectCard';
+
+const gitHubLink = 'https://github.com/aakashchothani0311';
 
 export const Projects = () => {
     const ref = useRef(null);
@@ -35,6 +38,9 @@ export const Projects = () => {
                     )
                 }
             </ul>
+            <Link href={gitHubLink} target='_blank' className={`text-center pt-8 block text-[#ADB7BE] sm:text-xl`}>
+                View All Projects
+            </Link>
         </motion.section>
     );
 }

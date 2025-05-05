@@ -1,6 +1,6 @@
-import { DiCss3, DiEclipse, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass } from 'react-icons/di';
+import { DiCss3, DiEclipse, DiHtml5, DiGit, DiGithubBadge, DiJava, DiMysql, DiNodejs, DiNpm, DiReact, DiSass, DiRedis } from 'react-icons/di';
 import { BiLogoJavascript, BiLogoMongodb, BiLogoRedux, BiLogoSpringBoot, BiLogoTailwindCss, BiLogoTypescript, BiLogoVisualStudio } from 'react-icons/bi';
-import { SiApachetomcat, SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger } from 'react-icons/si';
+import { SiApachetomcat, SiMui, SiOracle, SiPostman, SiSalesforce, SiSwagger, SiRabbitmq, SiElasticsearch } from 'react-icons/si';
 
 export const navLinks = [
     {
@@ -85,6 +85,11 @@ export const skills = [
         color: '#CB3837'
     },
     {
+        skill: BiLogoSpringBoot,
+        title: 'Spring',
+        color: '#8BC34A'
+    },
+    {
         skill: SiOracle,
         title: 'Oracle DB',
         color: '#F80000',
@@ -99,6 +104,11 @@ export const skills = [
         skill: BiLogoMongodb,
         title: 'MongoDB',
         color: '#47A248'
+    },
+    {
+        skill: DiRedis,
+        title: 'Redis',
+        color: '#EB352A'
     },
     {
         skill: DiGit,
@@ -128,6 +138,12 @@ export const skills = [
         dimension: 14
     },
     {
+        skill: SiRabbitmq,
+        title: 'RabbitMQ',
+        color: '#FF6600',
+        dimension: 14
+    },
+    {
         skill: SiSwagger,
         title: 'Swagger',
         color: '#85B642',
@@ -144,11 +160,6 @@ export const skills = [
         title: 'Tomcat',
         color: '#FFCA28',
         dimension: 14
-    },
-    {
-        skill: BiLogoSpringBoot,
-        title: 'Spring',
-        color: '#8BC34A'
     }
 ];
 
@@ -172,12 +183,12 @@ export const experiences = [
 		role: 'Graduate Teaching Assistant',
 		company: 'Northeastern University',
 		start: 'Jan 2025',
-		end: 'Present',
+		end: 'Apr 2025',
         imgSrc: '/images/profExp/northeasternLogo.png',
         dimension: 180,
 		tasks: [
-			'Assisting Prof. Dr. Chen Hsiang “Jones” Yu for the course INFO 6205: Program Structures and Algorithms, focusing on core data structures like set, queue, linked list, etc and algorithm techniques such as sorting and searching',
-			'Grading assignments and quizzes, conducting office hours and code review sessions for 100 students providing support on topics like efficient data structures, optimal algorithms and time and space complexity analysis using Big O notation'
+			'Assisted Prof. Dr. Chen Hsiang “Jones” Yu for the course INFO 6205: Program Structures and Algorithms, focusing on core data structures like set, queue, linked list, etc and algorithm techniques such as sorting and searching',
+			'Graded assignments and quizzes, conducted office hours and code review sessions for 100 students providing support on topics like efficient data structures, optimal algorithms and time and space complexity analysis using Big O notation'
 		]
 	},
 	{
@@ -213,39 +224,51 @@ export const experiences = [
 
 export const projectsData = [
     {
+        title: 'Vroom-N-Zoom Car Rental',
+        desc: '',
+        imgUrl: '/images/projects/vroomNzoom.png',
+        gitUrl: 'https://github.com/aakashchothani0311/vroom-n-zoom-car-rental'
+    },
+    {
         title: 'Crop Vista',
-        desc: 'A MERN application to bring farmers, FMCGs and distributors on a single platform to simplify the crop purchase process and ensure cost security for all the involved entities',
+        desc: 'A MERN application to bring farmers, FMCGs and distributors on a single platform to simplify the crop purchase process and ensure cost security for all the involved entities.',
         imgUrl: '/images/projects/cropVista.png',
         gitUrl: 'https://github.com/aakashchothani0311/crop-vista'
     },
-    // {
-    //     title: 'Portfolio Website',
-    //     desc: 'My Portfolio Website',
-    //     imgUrl: '/images/projects/portfolio.png',
-    //     gitUrl: 'https://github.com/aakashchothani0311/portfolio'
-    // },
+    {
+        title: 'Healthcare Plan Management',
+        desc: 'This project implements a backend system for managing healthcare plans, incorporating secure API access, caching, message queues, and real-time logging and analytics.',
+        imgUrl: '/images/projects/healthPlanMgmt.png',
+        gitUrl: 'https://github.com/aakashchothani0311/healthcare-plan-management'
+    },
+    /* {
+        title: 'Portfolio Website',
+        desc: 'My Portfolio Website',
+        imgUrl: '/images/projects/portfolio.png',
+        gitUrl: 'https://github.com/aakashchothani0311/portfolio'
+    }, */
     {
         title: 'REACT based Task Tracker',
-        desc: 'A MERN stack application to manage tasks with filtering capabilities, with features for marking task completion status and filtering by creation date, title, description and task status using Mongoose to perform CRUD on MongoDB',
+        desc: 'A MERN stack application to manage tasks with filtering capabilities, with features for marking task completion status and filtering by creation date, title, description and task status using Mongoose to perform CRUD on MongoDB.',
         imgUrl: '/images/projects/taskTracker.png',
         gitUrl: 'https://github.com/aakashchothani0311/task-tracker'
     },
     {
         title: 'Centralised Job Application Portal',
-        desc: 'Project 3 desc',
+        desc: 'This OracleDB based project simplifies the job application process by creating a centralized platform where candidates can enter their details once and apply to multiple jobs seamlessly. It eliminates redundancy for job seekers and provides recruiters with consistent, accurate data.',
         imgUrl: '/images/projects/jobAppTracker.png',
         gitUrl: 'https://github.com/aakashchothani0311/cent_job_app_portal'
     },
     {
         title: 'JavaFX based Task Tracker',
-        desc: 'Project 4 desc',
+        desc: '',
         imgUrl: '/images/projects/smartTaskTracker.png',
         gitUrl: 'https://github.com/aakashchothani0311/smart_task_tracker'
     },
-    {
+    /* {
         title: 'Hospital Inventory Management',
         desc: 'Authentication and CRUD operations',
         imgUrl: '/images/projects/hospInvMgmt.png',
         gitUrl: 'https://github.com/aakashchothani0311/hospital-inventory-management'
-    }
+    } */
 ];
