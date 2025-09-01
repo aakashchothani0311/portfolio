@@ -182,8 +182,7 @@ export const experiences = [
     {
 		role: 'Graduate Teaching Assistant',
 		company: 'Northeastern University',
-		start: 'Jan 2025',
-		end: 'Apr 2025',
+        tenure: ['Jan 2025 - Apr 2025', 'Sept 2025 - Dec 2025'],
         imgSrc: '/images/profExp/northeasternLogo.png',
         dimension: 180,
 		tasks: [
@@ -194,8 +193,7 @@ export const experiences = [
 	{
 		role: 'Full Stack Engineering Senior Analyst',
 		company: 'Accenture',
-		start: 'Dec 2021',
-		end: 'Dec 2023',
+        tenure: ['Dec 2021 - Dec 2023'],
         imgSrc: '/images/profExp/accentureLogo.png',
         dimension: 120,
 		tasks: [
@@ -209,8 +207,7 @@ export const experiences = [
 	{
 		role: 'Full Stack Engineering Analyst',
 		company: 'Accenture',
-		start: 'Dec 2020',
-		end: 'Dec 2021',
+        tenure: ['Dec 2020 - Dec 2021'],
 		imgSrc: '/images/profExp/accentureLogo.png',
         dimension: 120,
 		tasks: [

@@ -13,12 +13,16 @@ export const ExperienceCard = ({ experience, idx }) => {
             <div className='hidden sm:col-span-3 sm:flex flex-col justify-center items-center'>
                 <Image src={experience.imgSrc} width={experience.dimension} height={experience.dimension} alt={experience.company} />
                 {/* <Icon className='text-purple-500 w-16 h-16' /> */}
-                <p className='text-white mt-4'>{experience.start} - {experience.end}</p>
+                {
+                    experience.tenure.map((time, idx) => <p key={idx} className='text-white mt-1'>{time}</p>)
+                }
             </div>
             <div className='col-span-12 sm:col-span-9'>
                 <h5 className='mb-2 text-xl font-semibold text-white'>{experience.company}</h5>
                 <p className='sm:mb-2 text-white'>{experience.role}</p>
-                <p className='sm:hidden mb-2 sm:mb-0 text-white'>{experience.start} - {experience.end}</p>
+                {
+                    experience.tenure.map((time, idx) =><p key={idx} className='sm:hidden mb-2 sm:mb-0 text-white'>{time}</p>)
+                }
                 <ul className='list-disc text-base text-justify text-pink-500 pl-4 sm:pl-8'>
                     {
                         experience.tasks.map((task, idx) => 
